@@ -3,10 +3,12 @@ import { reactive } from 'vue';
 
 interface Props {
   color?: string;
+  onClick: () => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   color: 'white',
+  onClick: () => {},
 });
 
 const { color } = reactive(props);
@@ -15,6 +17,7 @@ const { color } = reactive(props);
 <template>
   <button
     class="btn"
+    v-bind:onClick="onClick"
     v-bind:style="{
       backgroundColor: color || 'white',
       color: color ? 'white' : 'black',

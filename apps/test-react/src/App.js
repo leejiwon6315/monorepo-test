@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { ReactButton } from 'core-react';
+import { customAlert } from 'core-common';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         >
           Learn React
         </a>
-        <ReactButton color="blue">코어에서 불러온 리액트 버튼</ReactButton>
+        <ReactButton onClick={() => customAlert('여긴 리액트')} color="blue">
+          코어에서 불러온 리액트 버튼
+        </ReactButton>
       </header>
     </div>
   );

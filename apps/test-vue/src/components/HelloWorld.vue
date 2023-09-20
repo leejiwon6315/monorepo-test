@@ -83,12 +83,15 @@
         >
       </li>
     </ul>
-    <vue-button v-bind:color="'green'">코어에서 불러온 뷰 버튼</vue-button>
+    <vue-button v-bind:color="'green'" @click="onClick"
+      >코어에서 불러온 뷰 버튼</vue-button
+    >
   </div>
 </template>
 
 <script>
 import { VueButton } from 'core-vue';
+import { customAlert } from 'core-common';
 
 export default {
   name: 'HelloWorld',
@@ -97,6 +100,15 @@ export default {
   },
   components: {
     VueButton,
+  },
+  setup() {
+    const onClick = () => {
+      customAlert('여긴 뷰');
+    };
+
+    return {
+      onClick,
+    };
   },
 };
 </script>

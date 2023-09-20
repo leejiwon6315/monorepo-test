@@ -4,11 +4,16 @@ import styled from 'styled-components';
 
 interface Props {
   children: React.ReactNode;
+  onClick: () => void;
   color?: string;
 }
 
-export const ReactButton = ({ children, color }: Props) => {
-  return <Button color={color}>{children}</Button>;
+export const ReactButton = ({ children, onClick, color }: Props) => {
+  return (
+    <Button onClick={onClick} color={color}>
+      {children}
+    </Button>
+  );
 };
 
 const Button = styled('button')<Pick<Props, 'color'>>`
