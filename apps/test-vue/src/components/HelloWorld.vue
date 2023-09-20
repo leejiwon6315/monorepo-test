@@ -83,9 +83,9 @@
         >
       </li>
     </ul>
-    <vue-button v-bind:color="'green'" @click="onClick"
-      >코어에서 불러온 뷰 버튼</vue-button
-    >
+    <vue-button v-bind:color="'green'" @click="onClick">
+      코어에서 불러온 뷰 버튼
+    </vue-button>
   </div>
 </template>
 
