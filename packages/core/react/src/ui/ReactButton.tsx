@@ -7,11 +7,11 @@ interface Props {
   color?: string;
 }
 
-export const Button = ({ children, color }: Props) => {
-  return <ButtonTag color={color}>{children}</ButtonTag>;
+export const ReactButton = ({ children, color }: Props) => {
+  return <Button color={color}>{children}</Button>;
 };
 
-const ButtonTag = styled('button')<Pick<Props, 'color'>>`
+const Button = styled('button')<Pick<Props, 'color'>>`
   background-color: ${({ color }) => color || 'white'};
   color: ${({ color }) => (color ? 'white' : 'black')};
 `;

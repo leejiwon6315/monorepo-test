@@ -83,12 +83,12 @@
         >
       </li>
     </ul>
-    <core-button v-bind:color="'green'">코어에서 불러온 뷰 버튼</core-button>
+    <vue-button v-bind:color="'green'">코어에서 불러온 뷰 버튼</vue-button>
   </div>
 </template>
 
 <script>
-import { Button } from 'core-vue';
+import { VueButton } from 'core-vue';
 
 export default {
   name: 'HelloWorld',
@@ -96,7 +96,7 @@ export default {
     msg: String,
   },
   components: {
-    CoreButton: Button,
+    VueButton,
   },
 };
 </script>

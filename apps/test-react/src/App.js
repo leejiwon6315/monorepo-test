@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button } from 'core-react';
+import { ReactButton } from 'core-react';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <Button color="blue">코어에서 불러온 리액트 버튼</Button>
+        <ReactButton color="blue">코어에서 불러온 리액트 버튼</ReactButton>
       </header>
     </div>
   );
