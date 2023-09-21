@@ -83,14 +83,14 @@
         >
       </li>
     </ul>
-    <vue-button v-bind:color="'green'" @click="onClick">
+    <vue-3-button v-bind:color="'green'" @click="onClick">
       코어에서 불러온 뷰 버튼
-    </vue-button>
+    </vue-3-button>
   </div>
 </template>
 
 <script>
-import { VueButton } from 'core-vue';
+import { Vue3Button } from 'core-vue-3';
 import { customAlert } from 'core-common';
 
 export default {
@@ -99,7 +99,7 @@ export default {
     msg: String,
   },
   components: {
-    VueButton,
+    Vue3Button,
   },
   setup() {
     const onClick = () => {

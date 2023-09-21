@@ -1,5 +1,5 @@
 {
-  "name": "core-vue",
+  "name": "core-vue-3",
   "private": false,
   "version": "0.1.0",
   "type": "module",
@@ -12,13 +12,13 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/core-vue.cjs.js",
-  "module": "./dist/core-vue.es.js",
+  "main": "./dist/core-vue-3.cjs.js",
+  "module": "./dist/core-vue-3.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/core-vue.es.js",
-      "require": "./dist/core-vue.cjs.js"
+      "import": "./dist/core-vue-3.es.js",
+      "require": "./dist/core-vue-3.cjs.js"
     }
   },
   "dependencies": {

@@ -15,9 +15,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'core-vue',
+      name: 'core-vue-3',
       formats: ['es', 'cjs'],
-      fileName: (format) => `core-vue.${format}.js`,
+      fileName: (format) => `core-vue-3.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
