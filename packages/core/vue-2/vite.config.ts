@@ -17,9 +17,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'core-vue-2',
+      name: 'core-heman-core-test-vue-2',
       formats: ['es', 'cjs'],
-      fileName: (format) => `core-vue-2.${format}.js`,
+      fileName: (format) => `core-heman-core-test-vue-2.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

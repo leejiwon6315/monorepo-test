@@ -21,6 +21,6 @@
   },
   "include": ["src"],
   "paths": {
-    "@core-common": ["src/*"]
+    "@core-heman-core-test-common": ["src/*"]
   }
 }

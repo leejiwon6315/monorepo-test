@@ -1,26 +1,27 @@
 {
-  "name": "core-common",
+  "name": "heman-core-test-common",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/core-common.cjs.js",
-  "module": "./dist/core-common.es.js",
+  "main": "./dist/heman-core-test-common.cjs.js",
+  "module": "./dist/heman-core-test-common.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/core-common.es.js",
-      "require": "./dist/core-common.cjs.js"
+      "import": "./dist/heman-core-test-common.es.js",
+      "require": "./dist/heman-core-test-common.cjs.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "publish-packages": "vue-tsc && vite build && changeset version && changeset publish"
   },
   "devDependencies": {
     "typescript": "^5.0.2",
@@ -29,6 +30,11 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
+    "@changesets/cli": "^2.26.2",
     "vitest": "^0.34.4"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "http://github.com/leejiwon6315/monorepo-test"
 }

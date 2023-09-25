@@ -1,28 +1,30 @@
 {
-  "name": "core-react",
+  "name": "heman-core-test-react",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish-packages": "vue-tsc && vite build && changeset version && changeset publish"
   },
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/core-react.cjs.js",
-  "module": "./dist/core-react.es.js",
+  "main": "./dist/heman-core-test-react.cjs.js",
+  "module": "./dist/heman-core-test-react.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/core-react.es.js",
-      "require": "./dist/core-react.cjs.js"
+      "import": "./dist/heman-core-test-react.es.js",
+      "require": "./dist/heman-core-test-react.cjs.js"
     }
   },
   "dependencies": {
+    "@changesets/cli": "^2.26.2",
     "@vitejs/plugin-react": "^4.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,5 +43,9 @@
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.5.3",
     "vite-tsconfig-paths": "^4.2.1"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "http://github.com/leejiwon6315/monorepo-test"
 }

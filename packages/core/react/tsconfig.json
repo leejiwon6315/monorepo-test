@@ -24,6 +24,6 @@
   "references": [{ "path": "./tsconfig.node.json" }],
 
   "paths": {
-    "@core-react": ["src/*"]
+    "@heman-core-test-react": ["src/*"]
   }
 }

@@ -29,6 +29,6 @@
   ],
   "references": [{ "path": "./tsconfig.node.json" }],
   "paths": {
-    "@core-vue-2": ["src/*"]
+    "@core-heman-core-test-vue-2": ["src/*"]
   }
 }

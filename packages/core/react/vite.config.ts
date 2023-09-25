@@ -15,9 +15,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'core-react',
+      name: 'heman-core-test-react',
       formats: ['es', 'cjs'],
-      fileName: (format) => `core-react.${format}.js`,
+      fileName: (format) => `heman-core-test-react.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'styled-components'],
