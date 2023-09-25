@@ -20,9 +20,15 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./shims-vue.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }],
   "paths": {
-    "@core-vue-3": ["src/*"]
+    "@core-vue-2": ["src/*"]
   }
 }

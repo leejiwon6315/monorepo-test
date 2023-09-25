@@ -83,32 +83,25 @@
         >
       </li>
     </ul>
-    <vue-3-button v-bind:color="'green'" @click="onClick">
-      코어에서 불러온 뷰 버튼
-    </vue-3-button>
+    <vue-2-button v-bind:onClick="onClickBtn" v-bind:bgColor="'green'">
+      코어에서 불러온 뷰2 버튼
+    </vue-2-button>
   </div>
 </template>
 
 <script>
-import { Vue3Button } from 'core-vue-3';
+import { Vue2Button } from 'core-vue-2';
 import { customAlert } from 'core-common';
-
 export default {
+  components: { Vue2Button },
   name: 'HelloWorld',
   props: {
     msg: String,
   },
-  components: {
-    Vue3Button,
-  },
-  setup() {
-    const onClick = () => {
-      customAlert('여긴 뷰');
-    };
-
-    return {
-      onClick,
-    };
+  methods: {
+    onClickBtn() {
+      customAlert('여긴 뷰2');
+    },
   },
 };
 </script>

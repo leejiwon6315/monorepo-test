@@ -15,7 +15,8 @@
   "name": "core",
   "packageManager": "yarn@1.22.17",
   "workspaces": [
-    "apps/*",
-    "packages/core/*"
-  ]
+      "apps/*",
+      "packages/core/*"
+    ]
+
 }
