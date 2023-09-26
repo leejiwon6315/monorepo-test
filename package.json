@@ -1,11 +1,11 @@
 {
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish-packages": "turbo run build && changeset version"
+    "version": "yarn changeset & yarn version"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
@@ -16,7 +16,6 @@
   "name": "heman-core-test",
   "packageManager": "yarn@1.22.17",
   "workspaces": [
-    "apps/*",
     "packages/core/*"
   ],
   "version": "1.0.0"

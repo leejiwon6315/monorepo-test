@@ -1,26 +1,25 @@
 {
   "name": "heman-core-test-react",
-  "private": true,
-  "version": "0.1.1",
+  "private": false,
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "publish-packages": "vue-tsc && vite build && changeset version && changeset publish"
+    "preview": "vite preview"
   },
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/heman-core-test-react.cjs.js",
+  "main": "./dist/heman-core-test-react.umd.js",
   "module": "./dist/heman-core-test-react.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/heman-core-test-react.es.js",
-      "require": "./dist/heman-core-test-react.cjs.js"
+      "require": "./dist/heman-core-test-react.umd.js"
     }
   },
   "dependencies": {

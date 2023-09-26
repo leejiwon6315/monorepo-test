@@ -11,9 +11,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'core-heman-core-test-common',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `core-heman-core-test-common.${format}.js`,
+      name: 'heman-core-test-common',
+      fileName: (format) => `heman-core-test-common.${format}.js`,
     },
   },
 });
