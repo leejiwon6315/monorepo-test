@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
-import path from 'path';
-import dts from 'vite-plugin-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig } from "vite";
+import path from "path";
+import dts from "vite-plugin-dts";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
@@ -10,9 +10,12 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'heman-core-test-common',
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "heman-core-test-common",
       fileName: (format) => `heman-core-test-common.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["path"],
     },
   },
 });
