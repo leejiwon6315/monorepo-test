@@ -5797,6 +5797,18 @@ vite-plugin-dts@^3.5.3:
     kolorist "^1.8.0"
     vue-tsc "^1.8.8"
 
+vite-plugin-dts@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-dts/-/vite-plugin-dts-3.6.0.tgz#8d1052e93ae4efef1b0860e44411570a58c77517"
+  integrity sha512-doxhDRFJCZD2sGjIp4V800nm8Y19GvmwckjG5vYPuiqJ7OBjc9NlW1Vp9Gkyh2aXlUs1jTDRH/lxWfcsPLOQHg==
+  dependencies:
+    "@microsoft/api-extractor" "^7.36.4"
+    "@rollup/pluginutils" "^5.0.2"
+    "@vue/language-core" "^1.8.8"
+    debug "^4.3.4"
+    kolorist "^1.8.0"
+    vue-tsc "^1.8.8"
+
 vite-plugin-vue2@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vite-plugin-vue2/-/vite-plugin-vue2-2.0.3.tgz#19aab2720e13a969b9d9272f85e899c671930ef2"

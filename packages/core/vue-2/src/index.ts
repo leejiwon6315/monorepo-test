@@ -1,2 +1,2 @@
-export { Vue2Button } from "./ui";
-export { AppHeaderLayout } from "./layout/";
+export { Vue2Button } from './ui';
+export { AppHeader } from './ui';

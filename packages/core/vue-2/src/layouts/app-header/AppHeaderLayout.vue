@@ -1,24 +1,6 @@
 <script lang="ts">
 export default {
   name: "AppHeaderLayout",
-  props: {
-    currentLogo: {
-      type: String,
-      default: "",
-    },
-    logoRouteUrl: {
-      type: String,
-      default: "",
-    },
-    isLoading: {
-      type: Boolean,
-      default: false,
-    },
-    isOpenDropdown: {
-      type: Boolean,
-      default: false,
-    },
-  },
 };
 </script>
 
@@ -30,26 +12,16 @@ export default {
     aria-label="main navigation"
   >
     <div class="navbar__section navbar__section--logo">
-      <a :href="logoRouteUrl" class="navbar-logo">
-        <img
-          v-if="currentLogo"
-          :src="currentLogo"
-          class="navbar-logo__img"
-          alt="Brand Logo"
-        />
-        <slot name="skeleton-logo" v-else />
-      </a>
+      <slot name="logo" />
     </div>
-    <div class="navbar__section navbar__section--header">
-      <slot name="skeleton-menus" v-if="isLoading" />
-      <slot name="menus" v-else />
 
-      <slot name="skeleton-controls" v-if="isLoading" />
-      <slot name="controls" v-else />
+    <div class="navbar__section navbar__section--header">
+      <slot name="menus" />
+      <slot name="controls" />
     </div>
 
     <!-- dropdown -->
-    <slot name="dropdown" v-if="!isLoading && isOpenDropdown" />
+    <slot name="dropdown" />
   </nav>
 </template>
 

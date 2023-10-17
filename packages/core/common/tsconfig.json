@@ -18,11 +18,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@heman-core-test-common": ["src/*"]
+    }
   },
 
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "paths": {
-    "@core-heman-core-test-common": ["src/*"]
-  }
 }

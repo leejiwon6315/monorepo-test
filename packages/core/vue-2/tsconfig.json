@@ -20,7 +20,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["vitest"]
+    "types": ["vitest"],
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
@@ -29,8 +33,5 @@
     "src/**/*.vue",
     "./shims-vue.d.ts"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "paths": {
-    "@core-heman-core-test-vue-2": ["src/*"]
-  }
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
