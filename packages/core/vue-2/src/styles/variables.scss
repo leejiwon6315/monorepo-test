@@ -1,0 +1,63 @@
+@import "./colors";
+
+/* 외부 주입으로 변경 가능한 테마 변수
+-------------------------- */
+
+// Basic
+$core-brand-primary: $core-warm-gray-900 !default;
+$core-brand-secondary: $core-deep-blue-900 !default;
+
+// Status Color
+$core-success: $core-green-900 !default;
+$core-warning: $core-orange-900 !default;
+$core-danger: $core-red-900 !default;
+$core-info: $core-deep-blue-900 !default;
+
+// Background Color
+$core-background-primary: $core-global-bg !default;
+
+// Global Navigation Color
+$core-gnb-background-color: $core-white !default;
+$core-gnb-text-color: $core-black !default;
+$core-gnb-active-color: $core-warm-gray-200 !default;
+$core-gnb-icon-color: $core-warm-gray-700 !default;
+
+// Dialog Header Color
+$core-dialog-header-color: $core-brand-primary !default;
+
+/* 변경 불가능한 테마 변수
+-------------------------- */
+
+// home-tax custom color
+$core-invoice-color-red: #c94540;
+
+// accent color set
+$core-accent-color: $core-brand-secondary;
+$core-accent-color-light-1: mix($core-white, $core-accent-color, 10%);
+$core-accent-color-light-2: mix($core-white, $core-accent-color, 20%);
+$core-accent-color-light-3: mix($core-white, $core-accent-color, 30%);
+$core-accent-color-light-4: mix($core-white, $core-accent-color, 40%);
+$core-accent-color-light-5: mix($core-white, $core-accent-color, 50%);
+$core-accent-color-light-6: mix($core-white, $core-accent-color, 60%);
+$core-accent-color-light-7: mix($core-white, $core-accent-color, 70%);
+$core-accent-color-light-8: mix($core-white, $core-accent-color, 80%);
+$core-accent-color-light-9: mix($core-white, $core-accent-color, 90%);
+
+// accent table
+$core-table-row-accent-background-color: rgba($core-accent-color, 0.05);
+$core-table-row-hover-border-color: $core-accent-color-light-5;
+
+// font-weight
+$core-font-weight-900: 900;
+$core-font-weight-800: 800;
+$core-font-weight-700: 700;
+$core-font-weight-600: 600;
+$core-font-weight-500: 500;
+$core-font-weight-400: 400;
+$core-font-weight-300: 300;
+$core-font-weight-200: 200;
+$core-font-weight-100: 100;
+
+// transitions
+$core-transition-duration: 400ms;
+$core-transition-easing: ease-out;
