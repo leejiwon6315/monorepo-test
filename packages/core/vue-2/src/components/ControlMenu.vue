@@ -43,7 +43,7 @@ export default {
   props: {
     menus: {
       type: Array as PropType<ControlMenuType[]>,
-      default: defaultControlMenu,
+      default: () => defaultControlMenu,
     },
   },
   components: {

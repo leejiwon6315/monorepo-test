@@ -68,7 +68,7 @@ export default {
     },
     menus: {
       type: Array as PropType<MenuType[]>,
-      default: defaultMenu,
+      default: () => defaultMenu,
     },
     menuOption: {
       type: Object as PropType<MenuPropsType>,
@@ -82,11 +82,11 @@ export default {
     },
     controlMenus: {
       type: Array as PropType<ControlMenuType[]>,
-      default: defaultControlMenu,
+      default: () => defaultControlMenu,
     },
     searchOption: {
       type: Object as PropType<GlobalSearchInputType>,
-      default: defaultGlobalSearchInput,
+      default: () => defaultGlobalSearchInput,
     },
   },
 };

@@ -28,7 +28,7 @@ export default {
   props: {
     menus: {
       type: Array as PropType<MenuType[]>,
-      default: defaultMenu,
+      default: () => defaultMenu,
     },
     currentId: {
       type: Number,
