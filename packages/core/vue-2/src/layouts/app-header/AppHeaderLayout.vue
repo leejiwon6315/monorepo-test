@@ -16,7 +16,7 @@
     <!-- dropdown -->
     <slot name="dropdown" />
   </nav>
-</template
+</template>
 
 <script lang="ts">
 export default {

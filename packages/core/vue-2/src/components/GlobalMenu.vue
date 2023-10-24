@@ -2,21 +2,17 @@
   <div class="header-channel">
     <template v-for="menu in menus">
       <a
-        v-if="menu.id === currentId"
         :key="menu.id"
         :to="menu.link"
-        class="header-channel__title active"
+        :class="[
+          'header-channel__title',
+          menu.id === currentId ? 'active' : '',
+        ]"
+        @click.stop.prevent="
+          menu.id !== currentId && onClickPrevent($event, menu)
+        "
       >
         {{ menu.menuName }}
-      </a>
-
-      <a
-        v-else
-        :key="menu.id"
-        :href="menu.link"
-        class="header-channel__title"
-        @click.stop.prevent="onClickPrevent($event, menu)"
-        >{{ menu.menuName }}
       </a>
     </template>
   </div>
@@ -25,19 +21,20 @@
 <script lang="ts">
 import { MenuType } from "@/types/menu.ts";
 import { defaultMenu } from "@/constants/menu.ts";
+import { PropType } from "vue";
 
 export default {
   name: "GlobalMenu",
   props: {
     menus: {
-      type: Array<MenuType>,
+      type: Array as PropType<MenuType[]>,
       default: defaultMenu,
     },
     currentId: {
       type: Number,
     },
     onClickPrevent: {
-      type: Function,
+      type: Function as PropType<(e: Event, menu: MenuType) => void>,
       default: null,
     },
   },

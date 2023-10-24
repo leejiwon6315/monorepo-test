@@ -26,10 +26,10 @@ export default {
       required: true,
     },
     width: {
-      type: String | Number,
+      type: String || Number,
     },
     height: {
-      type: String | Number,
+      type: String || Number,
     },
     fill: {
       type: String,
@@ -51,7 +51,7 @@ export default {
       default: false,
     },
     degree: {
-      type: Number | String,
+      type: Number || String,
       default: 0,
     },
   },
@@ -77,7 +77,7 @@ export default {
     stroke(newVal) {
       // 색 설정
       const selectedComponent = this.$el.querySelector(
-        `#${this.name}`
+        `#${this.name}`,
       ) as HTMLElement;
 
       if (this.$el.querySelector("#icons")) {
@@ -110,17 +110,17 @@ export default {
     },
     initIcon() {
       const selectedComponent = this.$el.querySelector(
-        `#${this.name}`
+        `#${this.name}`,
       ) as HTMLElement;
 
       const selectedSvgComponent = this.$el.querySelector("svg");
 
-      if (this.width) {
+      if (selectedSvgComponent && this.width) {
         selectedSvgComponent.style.width = this.width.includes("px")
           ? this.width
           : this.width + "px";
       }
-      if (this.height) {
+      if (selectedSvgComponent && this.height) {
         selectedSvgComponent.style.height = this.height.includes("px")
           ? this.height
           : this.height + "px";

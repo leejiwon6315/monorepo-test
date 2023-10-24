@@ -1,4 +1,3 @@
-<script src="Vue2Button.test.ts"></script>
 <template>
   <app-header-layout>
     <template v-slot:logo-container>
@@ -8,8 +7,8 @@
     <template v-slot:menu>
       <global-menu
         :menus="menus"
-        :currentId="menuOption.currentId"
-        :onClickPrevent="menuOption.onClickPrevent"
+        :currentId="menuOption?.currentId"
+        :onClickPrevent="menuOption?.onClickPrevent"
       />
     </template>
 
@@ -18,7 +17,7 @@
         <template v-slot:global-search>
           <global-search
             :placeholder="searchOption.placeholder"
-            :redirectURL="searchOption.redirectURL"
+            :redirectURL="searchOption.redirectUrl"
             :onSearch="searchOption.onSearch"
             :searchIconPath="searchOption.searchIconPath"
           />
@@ -52,6 +51,7 @@ import {
   defaultGlobalSearchInput,
   defaultMenu,
 } from "@/constants/menu.ts";
+import { PropType } from "vue";
 
 export default {
   name: "AppHeader",
@@ -67,25 +67,25 @@ export default {
       default: false,
     },
     menus: {
-      type: Array<MenuType>,
+      type: Array as PropType<MenuType[]>,
       default: defaultMenu,
     },
     menuOption: {
-      type: Object<MenuPropsType>(),
+      type: Object as PropType<MenuPropsType>,
     },
     currentMenuId: {
       type: Number,
     },
-    onClickMenuPrevent: {
-      type: Function,
+    onClickPrevent: {
+      type: Function as PropType<(e: Event, menu: MenuType) => void>,
       default: null,
     },
     controlMenus: {
-      type: Array<ControlMenuType>,
+      type: Array as PropType<ControlMenuType[]>,
       default: defaultControlMenu,
     },
     searchOption: {
-      type: Object<GlobalSearchInputType>(),
+      type: Object as PropType<GlobalSearchInputType>,
       default: defaultGlobalSearchInput,
     },
   },

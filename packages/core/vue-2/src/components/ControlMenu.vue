@@ -36,12 +36,13 @@
 import { ControlMenuType } from "@/types/menu.ts";
 import { defaultControlMenu } from "@/constants/menu.ts";
 import BaseSvg from "./BaseSvg.vue";
+import { PropType } from "vue";
 
 export default {
   name: "ControlMenu",
   props: {
     menus: {
-      type: Array<ControlMenuType>,
+      type: Array as PropType<ControlMenuType[]>,
       default: defaultControlMenu,
     },
   },

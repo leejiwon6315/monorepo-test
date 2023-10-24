@@ -22,6 +22,8 @@
 
 <script lang="ts">
 import BaseSvg from "./BaseSvg.vue";
+import { PropType } from "vue";
+
 export default {
   name: "GlobalSearch",
   data() {
@@ -44,7 +46,7 @@ export default {
       default: "",
     },
     onSearch: {
-      type: Function,
+      type: Function as PropType<(e?: Event) => void>,
       default: () => {},
     },
     searchIconPath: {
@@ -70,10 +72,10 @@ export default {
   },
   methods: {
     focus() {
-      this.searchForm.classList.add("focused");
+      this.searchForm?.classList.add("focused");
     },
     blur() {
-      this.searchForm.classList.remove("focused");
+      this.searchForm?.classList.remove("focused");
     },
     handleInsideClick() {
       this.searchKeyword = this.tmpSearchKeyword || "";
