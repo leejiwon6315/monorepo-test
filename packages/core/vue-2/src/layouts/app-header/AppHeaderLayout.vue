@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "AppHeaderLayout",
-};
-</script>
-
 <template>
   <nav
     id="navbar"
@@ -12,18 +6,23 @@ export default {
     aria-label="main navigation"
   >
     <div class="navbar__section navbar__section--logo">
-      <slot name="logo" />
+      <slot name="logo-container" />
     </div>
 
     <div class="navbar__section navbar__section--header">
-      <slot name="menus" />
+      <slot name="menu" />
       <slot name="controls" />
     </div>
-
     <!-- dropdown -->
     <slot name="dropdown" />
   </nav>
-</template>
+</template
+
+<script lang="ts">
+export default {
+  name: "AppHeaderLayout",
+};
+</script>
 
 <style lang="scss" scoped>
 .navbar {
@@ -34,23 +33,6 @@ export default {
 
   &__section {
     height: inherit;
-
-    &--logo {
-      .navbar-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        height: 100%;
-        width: 162px;
-        cursor: pointer;
-
-        &__img {
-          width: 162px;
-          height: 60px;
-        }
-      }
-    }
 
     &--header {
       display: flex;

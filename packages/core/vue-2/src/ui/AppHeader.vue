@@ -1,67 +1,93 @@
+<script src="Vue2Button.test.ts"></script>
+<template>
+  <app-header-layout>
+    <template v-slot:logo-container>
+      <slot name="logo" />
+    </template>
+
+    <template v-slot:menu>
+      <global-menu
+        :menus="menus"
+        :currentId="menuOption.currentId"
+        :onClickPrevent="menuOption.onClickPrevent"
+      />
+    </template>
+
+    <template v-slot:controls>
+      <control-menu :menus="controlMenus">
+        <template v-slot:global-search>
+          <global-search
+            :placeholder="searchOption.placeholder"
+            :redirectURL="searchOption.redirectURL"
+            :onSearch="searchOption.onSearch"
+            :searchIconPath="searchOption.searchIconPath"
+          />
+        </template>
+        <template v-slot:gnb-dropdown>
+          <slot name="gnb-dropdown" />
+        </template>
+        <template v-slot:profile-dropdown>
+          <slot name="profile-dropdown" />
+        </template>
+      </control-menu>
+    </template>
+
+    <slot name="dropdown" />
+  </app-header-layout>
+</template>
+
 <script lang="ts">
 import AppHeaderLayout from "@/layouts/app-header/AppHeaderLayout.vue";
 import ControlMenu from "@/components/ControlMenu.vue";
-import { Menu } from "@/types/menu.ts";
-import { defaultMenu } from "@/constants/menu.ts";
+import GlobalSearch from "@/components/GlobalSearch.vue";
+import GlobalMenu from "@/components/GlobalMenu.vue";
+import {
+  ControlMenuType,
+  GlobalSearchInputType,
+  MenuPropsType,
+  MenuType,
+} from "@/types/menu.ts";
+import {
+  defaultControlMenu,
+  defaultGlobalSearchInput,
+  defaultMenu,
+} from "@/constants/menu.ts";
 
 export default {
   name: "AppHeader",
   components: {
     AppHeaderLayout,
     ControlMenu,
+    GlobalMenu,
+    GlobalSearch,
   },
   props: {
-    currentLogo: {
-      type: String,
-      default: "",
-    },
-    logoRouteUrl: {
-      type: String,
-      default: "",
-    },
-    isLoading: {
-      type: Boolean,
-      default: false,
-    },
     isOpenDropdown: {
       type: Boolean,
       default: false,
     },
-    menus: { type: Array<Menu>, default: defaultMenu },
+    menus: {
+      type: Array<MenuType>,
+      default: defaultMenu,
+    },
+    menuOption: {
+      type: Object<MenuPropsType>(),
+    },
+    currentMenuId: {
+      type: Number,
+    },
+    onClickMenuPrevent: {
+      type: Function,
+      default: null,
+    },
+    controlMenus: {
+      type: Array<ControlMenuType>,
+      default: defaultControlMenu,
+    },
+    searchOption: {
+      type: Object<GlobalSearchInputType>(),
+      default: defaultGlobalSearchInput,
+    },
   },
 };
 </script>
-
-<template>
-  <template>
-    <app-header-layout>
-      <template v-slot:logo>
-        <a
-          :href="logoRouteUrl"
-          class="navbar-logo"
-          v-if="currentLogo && !isLoading"
-        >
-          <img :src="currentLogo" class="navbar-logo__img" alt="Brand Logo" />
-        </a>
-
-        <a class="navbar-logo" v-else>
-          <img src="#" class="navbar-logo__img" alt="default-logo"></img>
-        </a>
-      </template>
-
-      <slot name="menus" />
-
-      <template v-slot:controls>
-        <control-menu v-bind:menus="menus" >
-
-          <template v-slot:global-search>
-            <div></div>
-          </template>
-
-        </control-menu>
-      </template>
-
-      <slot name="dropdown" />
-    </app-header-layout>
-  </template>
-</template>

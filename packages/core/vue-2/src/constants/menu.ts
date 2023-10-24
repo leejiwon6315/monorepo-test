@@ -1,11 +1,11 @@
-import { Menu } from "@/types/menu";
-export const defaultMenu: Menu[] = [
-  {
-    title: "",
-    link: "",
-    className: [],
-    active: false,
-    isValid: false,
-    icon: "",
-  },
-];
+import { ControlMenuType, MenuType } from "@/types/menu.ts";
+
+export const defaultMenu: Array<MenuType> = [];
+
+export const defaultControlMenu: Array<ControlMenuType> = [];
+
+export const defaultGlobalSearchInput = {
+  placeholder: "",
+  redirectUrl: "",
+  onSearch: () => {},
+};
