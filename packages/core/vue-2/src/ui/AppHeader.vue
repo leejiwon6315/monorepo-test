@@ -31,7 +31,9 @@
       </control-menu>
     </template>
 
-    <slot name="dropdown" />
+    <template v-slot:dropdown>
+      <slot name="dropdown" />
+    </template>
   </app-header-layout>
 </template>
 

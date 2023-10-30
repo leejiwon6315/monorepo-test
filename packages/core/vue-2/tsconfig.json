@@ -30,7 +30,6 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/**/*.svg",
     "./shims-vue.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
