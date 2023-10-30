@@ -15,9 +15,6 @@
 </template>
 
 <script lang="ts">
-/**
- * NOTE: 정상 동작하지 않는 컴포넌트 입니다. 더이상 사용하지 말아주세요.
- */
 export default {
   name: "BaseSvg",
   props: {

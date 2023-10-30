@@ -1,4 +1,5 @@
 @import "./colors";
+@import "./var";
 
 /* 외부 주입으로 변경 가능한 테마 변수
 -------------------------- */
@@ -61,3 +62,22 @@ $core-font-weight-100: 100;
 // transitions
 $core-transition-duration: 400ms;
 $core-transition-easing: ease-out;
+
+// z-index
+$core-header-z-index: 2000;
+$core-home-z-index: 2001;
+$core-home-movable-z-index: 2002;
+
+// top-banner
+$core-top-banner-height: 60px;
+
+// gnb
+$core-header-height: 60px;
+
+// aside
+$core-aside-width: 250px;
+
+// border
+$core-border-base: 1px solid $--border-color-base;
+$core-border-light: 1px solid $--border-color-light;
+$core-border-lighter: 1px solid $--border-color-lighter;
