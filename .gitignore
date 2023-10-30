@@ -39,6 +39,3 @@ yarn-error.log*
 *.xml
 *.iml
 .idea/.gitignore
-
-.styles
-*.scss
